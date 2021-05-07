@@ -25,7 +25,7 @@ Route::get('login', function () {
     return view('pages.login');
 });
 
-Route::get('register', 'App\Http\Controllers\RegisterController@register');
+Route::get('register', [Registercontroller::class,'showForm']);
 
 Route::get('add', function () {
     return view('pages.add');
